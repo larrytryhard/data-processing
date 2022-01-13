@@ -14,3 +14,8 @@ function myFunction() {
         x.className = "topnav";
     }
 }   
+
+let myDate = new Date();
+let myYear = myDate.getFullYear();
+document.getElementById("copyright").innerHTML = myYear;
+console.log(myYear);
