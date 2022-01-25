@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/nav.css" />
   <link rel="stylesheet" href="css/forms.css" />
+  <link rel="stylesheet" href="css/data-processing.css" />
+
 
  </head>
  <body>
@@ -21,14 +23,40 @@
      </header>
      
    <main class="wrapper">
+    <div id="output">
         <form method="get" action="" class="main-form">
+            <div id="widgets">
+                <div>
+                    <b>Widget</b><br />
+                    <p>Our Widgets are spring loaded and need no batteries!</p>
+                    <p>At $3.99 they're a bargain!</p>
+                    <p><label><input type="checkbox" name="Cart" value="Widget" /> Add to Cart </label></p>
+                    <div class="pic"><img src="images/widget.png" /></div>
+                </div>
+                <div>
+                    <b>Sprocket</b><br />
+                    <p>Our Sprockets are well made and hold up to extreme pressure!</p>
+                    <p>They only cost $5.99!</p>
+                    <p><label><input type="checkbox" name="Cart" value="Sprocket" /> Add to Cart </label></p>
+                    <div class="pic"><img src="images/sprocket.png" /></div>
+                </div>
+                <div>
+                    <b>Thingy</b><br />
+                    <p>Our Thingys have many uses, and people love them!</p>
+                    <p>Such a deal at $1.99!</p>
+                    <p><label><input type="checkbox" name="Cart" value="Thingy" /> Add to Cart </label></p>
+                    <div class="pic"><img src="images/thingy.png" /></div>
+                </div>
+            </div>         
+
+            <h3>shipping info</h3>
             <div>
                 <label for="FirstName">First Name</label>:<br /> 
-                <input type="text" name="FirstName" id="FirstName" placeholder="First Name" required="required" title="First Name is required" autofocus />
+                <input type="text" name="First_Name" id="First_Name" placeholder="First Name" required="required" title="First Name is required" autofocus />
             </div>
             <div>
                 <label for="LastName">Last Name</label>:<br /> 
-                <input type="text" name="LastName" id="LastName" placeholder="Last Name" required="required" title="Last Name is required"/>
+                <input type="text" name="Last_Name" id="Last_Name" placeholder="Last Name" required="required" title="Last Name is required"/>
             </div>
             <div>
                 <label for="Email">Email</label>:<br /> 
@@ -36,8 +64,13 @@
             </div>
             <div>
                 <label for="Address">Address</label>:<br /> 
-                <input type="address" name="Address" id="Address" placeholder="Please put your address here" required="required" title="Address is required"/>
+                <input type="text" name="Address" id="Address" placeholder="Please put your address here" required="required" title="Address is required"/>
             </div>
+            <div>
+                <label for="City">City</label>:<br /> 
+                <input type="text" name="City" id="City" placeholder="City" required="required" title="City is required"/>
+            </div>
+
             <div>
                 <label for="State">State</label>:<br /> 
                 <select name="State" id="State" required="required" >
@@ -49,29 +82,16 @@
                 </select>
             </div>
             <div>
-                <fieldset>
-                    <legend>Would You Like to Join Our Mailing List?</legend>
-                    <input type="radio" name="JoinMailingList" value="Yes" required="required" /> Yes</label> <br />
-                    <input type="radio" name="JoinMailingList" value="No" /> No</label>
-                </fieldset>
+                <label for="Postal Code">Postal Code</label>:<br /> 
+                <input type="text" name="postalCode" id="postalCode" placeholder="Poatal Code" required="required" title="Postal Code is required"/>
             </div>
             <div>
-                <fieldset>
-                    <legend>What are you interested in?</legend>
-                    <input type="checkbox" name="InterestedIn" value="Website" /> Website</label> <br />
-                    <input type="checkbox" name="InterestedIn" value="Online Calender" /> Online Calendar</label> <br />
-                    <input type="checkbox" name="InterestedIn" value="ContactForm" /> Contact Form</label> <br />
-                    <input type="checkbox" name="InterestedIn" value="Online Calender" /> Complimentary Lollipops</label>
-
-
-                </fieldset>
-            </div>
-            <div>
-                <label for="Address">Address</label>:<br /> 
-                <textarea  name="Comments" placeholder="Your opinion is important to us" cols="36" rows="4"></textarea>    
+                <label for="Note">Note</label>:<br /> 
+                <textarea  name="Note" placeholder="Note" cols="36" rows="4"></textarea>    
             </div>
             <div><input type="submit" value="Submit"/></div>
         </form>
+    </div>
      <footer>
       <p><small>&copy; <span id="copyright"></span> by 
           YOUR NAME HERE, All Rights Reserved ~ 
@@ -80,6 +100,7 @@
      </p>
     </footer>
   </main>
+<script src="js/data-processing.js"></script>
 <script src="js/main.js"></script>
      
  </body>
